@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверить IMEI</title>
+</head>
+<body>
+    <h1>Проверить IMEI</h1>
+    <form method="POST">
+        <label for="imei">IMEI Устройства:</label>
+        <input type="text" id="imei" name="imei" required>
+        <br>
+        <label for="token">Токен:</label>
+        <input type="text" id="token" name="token" required>
+        <br>
+        <button type="submit">Проверить</button>
+    </form>
+
+    <h2>Содержимое JSON:</h2>
+    <pre>{{ data | tojson(indent=4) }}</pre>
+</body>
+</html>
